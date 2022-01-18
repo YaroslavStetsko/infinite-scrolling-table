@@ -1,0 +1,48 @@
+.item {
+  padding: 7px 10px;
+  font-weight: 400;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+  span {
+    margin-left: auto;
+    opacity: 0;
+    display: block;
+    height: 21px;
+    transition: 0.1s;
+    cursor: pointer;
+    img {
+      width: 21px;
+    }
+  }
+  input {
+    margin-left: 10px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + div {
+      opacity: 1;
+    }
+  }
+  div:last-child {
+    background: #09a391;
+    border-radius: 50%;
+    text-align: center;
+    width: 21px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.1s;
+  }
+  &:nth-child(2n-1) {
+    background: #f3f5f9;
+  }
+  &:hover {
+    background: #dcecee;
+  }
+}
