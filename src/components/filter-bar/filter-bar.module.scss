@@ -1,0 +1,80 @@
+.filterBar {
+  padding: 20px;
+  box-shadow: 41px 0px 63px 0px rgba(60, 60, 80, 0.03);
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  div {
+    &:nth-child(2) {
+      opacity: 0.6;
+    }
+  }
+}
+
+.tags {
+  margin-top: 15px;
+  & > div {
+    &:first-child {
+      font-weight: 600;
+    }
+  }
+}
+
+.tagsItems {
+  height: 155px;
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+form {
+  margin-top: 30px;
+  label {
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+  }
+  .inputs {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    input {
+      width: 100%;
+      background: #f3f5f9;
+      border: none;
+      outline: none;
+      padding: 12px 7px;
+      border-radius: 10px;
+    }
+  }
+  button {
+    position: absolute;
+    width: 310px;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #09a391;
+    border-radius: 6px;
+    transition: 0.1s;
+    &:hover {
+      background: #0ab9a5;
+    }
+  }
+}
